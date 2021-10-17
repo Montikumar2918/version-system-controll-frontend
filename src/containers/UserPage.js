@@ -17,7 +17,7 @@ function UserPage({ match }) {
     fetchUser();
     fetchRepositories();
     
-  }, []);
+  }, [fetchUser,fetchRepositories]);
 
   async function fetchUser() {
     const { data } = await getUserData(userNameParams);

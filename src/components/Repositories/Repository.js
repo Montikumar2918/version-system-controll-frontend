@@ -10,7 +10,7 @@ const Repository = ({ repo, user }) => (
         <a
           href={`https://github.com/${repo.full_name}`}
           target="_blank"
-          rel="noopener norefferer"
+          rel="norefferer"
         >
           <span>{repo.name}</span>
         </a>
