@@ -13,12 +13,6 @@ function UserPage({ match }) {
   const [repositories, setRepositories] = useState([]);
   const userNameParams = match.params.userName;
 
-  useEffect(() => {
-    fetchUser();
-    fetchRepositories();
-    
-  }, [fetchUser,fetchRepositories]);
-
   async function fetchUser() {
     const { data } = await getUserData(userNameParams);
     setUser(data);
@@ -27,6 +21,12 @@ function UserPage({ match }) {
     const { data } = await getUserRepositories(userNameParams);
     setRepositories(data);
   }
+
+  useEffect(() => {
+    fetchUser();
+    fetchRepositories();
+    
+  });
 
   return (
     <>

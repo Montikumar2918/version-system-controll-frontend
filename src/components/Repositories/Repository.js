@@ -9,8 +9,9 @@ const Repository = ({ repo, user }) => (
         <i className="fa fa-book pr-1" />
         <a
           href={`https://github.com/${repo.full_name}`}
+          rel="noreferrer noopener"
           target="_blank"
-          rel="noopener norefferer"
+         
         >
           <span>{repo.name}</span>
         </a>
